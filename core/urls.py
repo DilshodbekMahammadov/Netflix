@@ -22,8 +22,12 @@ from django.conf.urls.i18n import i18n_patterns
 
 from main.views import *
 
-urlpatterns += i18n_patterns(
+urlpatterns = [
+
     path('admin/', admin.site.urls),
+]
+
+urlpatterns += i18n_patterns(
     path('aktyorlar/', AktyorlarAPIView.as_view()),
     path('tariflar/', TarifAPIView.as_view()),
     path('kinolar/', KinoAPIView.as_view()),
